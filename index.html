@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portes Ouvertes - Cité Scolaire de Mirepoix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Cité Scolaire de Mirepoix</h1>
+            <p>Bienvenue aux Portes Ouvertes</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="menu-selection" class="active">
+            <h2>Quel est l'objet de votre visite ?</h2>
+            <p>Afin de mieux vous connaître et favoriser nos futurs échanges, merci de sélectionner votre parcours.</p>
+            <div class="card-grid">
+                <div class="card" onclick="showSection('form-college')">
+                    <h3>🏫 Collège</h3>
+                    <p>Pour les futurs collégiens (6ème - 3ème)</p>
+                    <button class="btn">Commencer</button>
+                </div>
+                <div class="card" onclick="showSection('form-lycee')">
+                    <h3>🎓 Lycée & Supérieur</h3>
+                    <p>Voies Générale, Techno, Pro, BTS & Licence</p>
+                    <button class="btn">Commencer</button>
+                </div>
+                <div class="card highlight" onclick="showSection('form-sortie')">
+                    <h3>👋 Fin de visite</h3>
+                    <p>Laissez-nous vos impressions avant de partir</p>
+                    <button class="btn-outline">Donner mon avis</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="form-college" class="hidden">
+            <button class="btn-back" onclick="showSection('menu-selection')">← Retour</button>
+            <h2>Questionnaire Collège</h2>
+            <form onsubmit="handleForm(event, 'Collège')">
+                <div class="form-group">
+                    <label>Nom *</label>
+                    <input type="text" required placeholder="Votre nom" name="nom">
+                </div>
+                <div class="form-group">
+                    <label>Prénom *</label>
+                    <input type="text" required placeholder="Votre prénom" name="prenom">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="contact@exemple.com" name="email">
+                </div>
+                <div class="form-group">
+                    <label>Établissement d'origine</label>
+                    <input type="text" name="etablissement">
+                </div>
+                <div class="form-group">
+                    <label>Classe actuelle</label>
+                    <input type="text" name="classe">
+                </div>
+
+                <div class="form-group">
+                    <label>Options envisagées (Plusieurs réponses possibles)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="options" value="pas d option"> Pas d'option</label>
+                        <label><input type="checkbox" name="options" value="section foot"> Section Foot</label>
+                        <label><input type="checkbox" name="options" value="UNSS"> UNSS</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Commentaire éventuel</label>
+                    <textarea rows="3" name="commentaire"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Souhaitez-vous être recontacté ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="recontact" value="oui"> Oui</label>
+                        <label><input type="radio" name="recontact" value="non"> Non</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Valider</button>
+            </form>
+        </section>
+
+        <section id="form-lycee" class="hidden">
+            <button class="btn-back" onclick="showSection('menu-selection')">← Retour</button>
+            <h2>Questionnaire Lycée</h2>
+            <form onsubmit="handleForm(event, 'Lycée')">
+                <div class="row">
+                    <div class="form-group half">
+                        <label>Nom *</label>
+                        <input type="text" required name="nom">
+                    </div>
+                    <div class="form-group half">
+                        <label>Prénom *</label>
+                        <input type="text" required name="prenom">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label>Département d'origine</label>
+                    <select name="departement">
+                        <option value="">Choisir...</option>
+                        <option value="09">Ariège (09)</option>
+                        <option value="11">Aude (11)</option>
+                        <option value="31">Haute-Garonne (31)</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Établissement d'origine</label>
+                    <input type="text" name="etablissement">
+                </div>
+
+                <div class="form-group">
+                    <label>Votre visite concerne :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="generale"> Voie Générale</label>
+                        <label><input type="checkbox" value="techno"> Voie Technologique</label>
+                        <label><input type="checkbox" value="pro"> Voie Professionnelle</label>
+                        <label><input type="checkbox" value="bts"> BTS</label>
+                        <label><input type="checkbox" value="licence"> Licence</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Options en seconde :</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="none"> Pas d'option</label>
+                        <label><input type="checkbox" value="foot"> Section Foot</label>
+                        <label><input type="checkbox" value="equitation"> Section Équitation</label>
+                        <label><input type="checkbox" value="sport"> Option Sport</label>
+                        <label><input type="checkbox" value="cit"> CIT</label>
+                        <label><input type="checkbox" value="langues"> LV3 ou Latin</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Souhaitez-vous être recontacté ?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="recontact_lycee" value="oui"> Oui</label>
+                        <label><input type="radio" name="recontact_lycee" value="non"> Non</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Valider</button>
+            </form>
+        </section>
+
+        <section id="form-sortie" class="hidden">
+            <button class="btn-back" onclick="showSection('menu-selection')">← Retour</button>
+            <h2>Merci de votre visite</h2>
+            <p>Aidez-nous à améliorer l'accueil pour l'année prochaine.</p>
+
+            <form onsubmit="handleForm(event, 'Sortie')">
+                <div class="form-group">
+                    <label>Points forts :</label>
+                    <textarea name="points_forts" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Points faibles :</label>
+                    <textarea name="points_faibles" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Commentaire éventuel :</label>
+                    <textarea name="commentaire_sortie" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer mon avis</button>
+            </form>
+        </section>
+
+        <section id="confirmation" class="hidden" style="text-align: center;">
+            <div style="font-size: 4rem;">✅</div>
+            <h2>Merci !</h2>
+            <p>Vos réponses ont bien été enregistrées.</p>
+            <button class="btn" onclick="location.reload()">Retour à l'accueil</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cité Scolaire de Mirepoix - Portes Ouvertes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
