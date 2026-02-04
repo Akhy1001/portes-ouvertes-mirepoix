@@ -24,8 +24,8 @@ CREATE TABLE IF NOT EXISTS inscriptions_lycee (
     email VARCHAR(150),
     departement VARCHAR(50),
     etablissement_origine VARCHAR(150),
-    visite_pour TEXT, -- Voies concernées (Générale, Techno, etc.)
-    options_seconde TEXT,
+    visite_pour TEXT, -- Contient : 2nd GT, 1ère G, 1ère T et leurs sous-options (SI, Maths, STI2D...)
+    options_seconde TEXT, -- (Obsolète dans la nouvelle version du formulaire, gardé pour compatibilité)
     recontact ENUM('oui', 'non'),
     date_creation TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

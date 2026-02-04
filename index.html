@@ -131,18 +131,60 @@
                 <div class="form-group">
                     <label>Votre visite concerne :</label>
                     <div class="checkbox-group vertical-group">
-                        <!-- Voie Générale et Techno -->
+                        <!-- 2nd Générale et Technologie -->
                         <div class="option-container">
-                            <label><input type="checkbox" name="visite_pour[]" value="generale_techno" id="chk-gt"
-                                    onchange="toggleSubOptions('sub-gt', this)"> Voie Générale & Technologique</label>
-                            <div id="sub-gt" class="sub-options hidden">
+                            <label><input type="checkbox" name="visite_pour[]" value="2nd_generale_techno"
+                                    id="chk-2nd-gt" onchange="toggleSubOptions('sub-2nd-gt', this)"> 2nd Générale &
+                                Technologique</label>
+                            <div id="sub-2nd-gt" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="si"> SI</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="cit"> CIT</label>
+                            </div>
+                        </div>
+
+                        <!-- 1ère Générale -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="premiere_generale" id="chk-1g"
+                                    onchange="toggleSubOptions('sub-1g', this)"> 1ère Générale</label>
+                            <div id="sub-1g" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="maths"> Mathématiques</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="nsi"> NSI</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="llce_anglais"> LLCE
+                                    Anglais</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="italien_lv3"> Italien
+                                    LV3</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="svt"> SVT</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="physique_chimie">
+                                    Physique-Chimie</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="hda"> Histoire des
+                                    Arts</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="ses"> SES</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="hggsp"> HGGSP</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="hlp"> HLP</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="eppcs"> EPPCS</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="section_sport"> Section
+                                    Sport</label>
+                            </div>
+                        </div>
+
+                        <!-- 1ère Technologique -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="premiere_techno" id="chk-1t"
+                                    onchange="toggleSubOptions('sub-1t', this)"> 1ère Technologique</label>
+                            <div id="sub-1t" class="sub-options hidden">
                                 <label><input type="checkbox" name="visite_pour[]" value="sti2d"> STI2D</label>
                             </div>
                         </div>
 
                         <!-- Voie Pro -->
                         <div class="option-container">
-                            <label><input type="checkbox" name="visite_pour[]" value="pro"> Voie Professionnelle</label>
+                            <label><input type="checkbox" name="visite_pour[]" value="pro" id="chk-pro"
+                                    onchange="toggleSubOptions('sub-pro', this)"> Voie Professionnelle</label>
+                            <div id="sub-pro" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="bac_pro_ciel"> CIEL</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="bac_pro_mic"> MIC</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="bac_pro_trpm"> TRPM</label>
+                            </div>
                         </div>
 
                         <!-- BTS -->
@@ -167,18 +209,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label>Options en seconde :</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="options_seconde[]" value="none"> Pas d'option</label>
-                        <label><input type="checkbox" name="options_seconde[]" value="foot"> Section Foot</label>
-                        <label><input type="checkbox" name="options_seconde[]" value="equitation"> Section
-                            Équitation</label>
-                        <label><input type="checkbox" name="options_seconde[]" value="sport"> Option Sport</label>
-                        <label><input type="checkbox" name="options_seconde[]" value="cit"> CIT</label>
-                        <label><input type="checkbox" name="options_seconde[]" value="langues"> LV3 ou Latin</label>
-                    </div>
-                </div>
+
 
                 <div class="form-group">
                     <label>Souhaitez-vous être recontacté ?</label>
