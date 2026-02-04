@@ -19,19 +19,28 @@ function showSection(sectionId) {
 }
 
 // Gestion de la soumission des formulaires
+// Gestion de la soumission des formulaires
 function handleForm(event, formName) {
     event.preventDefault(); // Empêche le rechargement réel de la page
 
-    // Ici, vous pourriez ajouter le code pour envoyer les données à un serveur ou Google Sheets
-    // Pour l'instant, on simule une réussite
-
-    console.log(`Formulaire ${formName} soumis.`);
-
-    // Récupération des données (exemple)
     const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    console.log(data);
+    formData.append('form_type', formName);
 
-    // Afficher l'écran de confirmation
-    showSection('confirmation');
+    fetch('submit_form.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                console.log(`Formulaire ${formName} soumis avec succès.`);
+                showSection('confirmation');
+            } else {
+                alert('Erreur: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Erreur:', error);
+            alert("Une erreur s'est produite lors de l'envoi.");
+        });
 }

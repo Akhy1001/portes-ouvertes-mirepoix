@@ -70,9 +70,9 @@
                 <div class="form-group">
                     <label>Options envisagées (Plusieurs réponses possibles)</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" name="options" value="pas d option"> Pas d'option</label>
-                        <label><input type="checkbox" name="options" value="section foot"> Section Foot</label>
-                        <label><input type="checkbox" name="options" value="UNSS"> UNSS</label>
+                        <label><input type="checkbox" name="options[]" value="pas d option"> Pas d'option</label>
+                        <label><input type="checkbox" name="options[]" value="section foot"> Section Foot</label>
+                        <label><input type="checkbox" name="options[]" value="UNSS"> UNSS</label>
                     </div>
                 </div>
 
@@ -131,23 +131,24 @@
                 <div class="form-group">
                     <label>Votre visite concerne :</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" value="generale"> Voie Générale</label>
-                        <label><input type="checkbox" value="techno"> Voie Technologique</label>
-                        <label><input type="checkbox" value="pro"> Voie Professionnelle</label>
-                        <label><input type="checkbox" value="bts"> BTS</label>
-                        <label><input type="checkbox" value="licence"> Licence</label>
+                        <label><input type="checkbox" name="visite_pour[]" value="generale"> Voie Générale</label>
+                        <label><input type="checkbox" name="visite_pour[]" value="techno"> Voie Technologique</label>
+                        <label><input type="checkbox" name="visite_pour[]" value="pro"> Voie Professionnelle</label>
+                        <label><input type="checkbox" name="visite_pour[]" value="bts"> BTS</label>
+                        <label><input type="checkbox" name="visite_pour[]" value="licence"> Licence</label>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Options en seconde :</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox" value="none"> Pas d'option</label>
-                        <label><input type="checkbox" value="foot"> Section Foot</label>
-                        <label><input type="checkbox" value="equitation"> Section Équitation</label>
-                        <label><input type="checkbox" value="sport"> Option Sport</label>
-                        <label><input type="checkbox" value="cit"> CIT</label>
-                        <label><input type="checkbox" value="langues"> LV3 ou Latin</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="none"> Pas d'option</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="foot"> Section Foot</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="equitation"> Section
+                            Équitation</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="sport"> Option Sport</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="cit"> CIT</label>
+                        <label><input type="checkbox" name="options_seconde[]" value="langues"> LV3 ou Latin</label>
                     </div>
                 </div>
 
