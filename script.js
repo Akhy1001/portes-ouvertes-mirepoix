@@ -44,3 +44,16 @@ function handleForm(event, formName) {
             alert("Une erreur s'est produite lors de l'envoi.");
         });
 }
+
+// Gestion des sous-options (checkbox)
+function toggleSubOptions(subId, checkbox) {
+    const subContainer = document.getElementById(subId);
+    if (checkbox.checked) {
+        subContainer.classList.remove('hidden');
+    } else {
+        subContainer.classList.add('hidden');
+        // Optionnel : décocher les sous-options si on décoche le parent
+        const checkboxes = subContainer.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(cb => cb.checked = false);
+    }
+}

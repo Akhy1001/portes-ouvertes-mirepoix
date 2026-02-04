@@ -142,6 +142,28 @@ textarea {
     gap: 15px;
 }
 
+.vertical-group {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sub-options {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sub-options.hidden {
+    display: none;
+}
+
 .checkbox-group label,
 .radio-group label {
     background: #f0f2f5;

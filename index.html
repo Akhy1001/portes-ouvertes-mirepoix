@@ -130,12 +130,40 @@
 
                 <div class="form-group">
                     <label>Votre visite concerne :</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="visite_pour[]" value="generale"> Voie Générale</label>
-                        <label><input type="checkbox" name="visite_pour[]" value="techno"> Voie Technologique</label>
-                        <label><input type="checkbox" name="visite_pour[]" value="pro"> Voie Professionnelle</label>
-                        <label><input type="checkbox" name="visite_pour[]" value="bts"> BTS</label>
-                        <label><input type="checkbox" name="visite_pour[]" value="licence"> Licence</label>
+                    <div class="checkbox-group vertical-group">
+                        <!-- Voie Générale et Techno -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="generale_techno" id="chk-gt"
+                                    onchange="toggleSubOptions('sub-gt', this)"> Voie Générale & Technologique</label>
+                            <div id="sub-gt" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="sti2d"> STI2D</label>
+                            </div>
+                        </div>
+
+                        <!-- Voie Pro -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="pro"> Voie Professionnelle</label>
+                        </div>
+
+                        <!-- BTS -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="bts" id="chk-bts"
+                                    onchange="toggleSubOptions('sub-bts', this)"> BTS</label>
+                            <div id="sub-bts" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="bts_ciel"> BTS CIEL</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="bts_cprp"> BTS CPRP</label>
+                                <label><input type="checkbox" name="visite_pour[]" value="bts_cim"> BTS CIM</label>
+                            </div>
+                        </div>
+
+                        <!-- Licence -->
+                        <div class="option-container">
+                            <label><input type="checkbox" name="visite_pour[]" value="licence" id="chk-licence"
+                                    onchange="toggleSubOptions('sub-licence', this)"> Licence</label>
+                            <div id="sub-licence" class="sub-options hidden">
+                                <label><input type="checkbox" name="visite_pour[]" value="licence_campi"> CAMPI</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
