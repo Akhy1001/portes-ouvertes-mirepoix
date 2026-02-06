@@ -34,7 +34,7 @@ try {
 
     } elseif ($formType === 'Lycée') {
         // --- TRAITEMENT FORMULAIRE LYCÉE ---
-        $stmt = $pdo->prepare("INSERT INTO inscriptions_lycee (nom, prenom, email, departement, etablissement_origine, visite_pour, options_seconde, recontact) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $pdo->prepare("INSERT INTO inscriptions_lycee (nom, prenom, email, departement, etablissement_origine, classe_actuelle, visite_pour, options_seconde, recontact) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         // Checkbox : Visite concerne
         // Note: Dans le HTML actuel, le name est 'options' pour collège mais n'est pas explicite pour lycée groupé.
@@ -62,6 +62,7 @@ try {
             $_POST['email'] ?? '',
             $_POST['departement'] ?? '',
             $_POST['etablissement'] ?? '',
+            $_POST['classe'] ?? '',
             $visitePour,
             $optionsSeconde,
             $_POST['recontact_lycee'] ?? 'non'

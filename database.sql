@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS inscriptions_lycee (
     email VARCHAR(150),
     departement VARCHAR(50),
     etablissement_origine VARCHAR(150),
+    classe_actuelle VARCHAR(50),
     visite_pour TEXT, -- Contient : 2nd GT (CIT, Pas d'option, Foot, Equitation, Sport, Latin, Arts...), 1ère G (Maths, NSI, SVT...), 1ère T, Pro, BTS, Licence CAPPI
     options_seconde TEXT, -- (Obsolète dans la nouvelle version du formulaire, gardé pour compatibilité)
     recontact ENUM('oui', 'non'),
