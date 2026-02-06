@@ -1,6 +1,6 @@
 # Portes Ouvertes - Cité Scolaire de Mirepoix
 
-![Version](https://img.shields.io/badge/version-1.0.5-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.5git-blue.svg)
 ![Status](https://img.shields.io/badge/status-live-green.svg)
 
 Bienvenue sur le dépôt de l'application web dédiée à la **Journée Portes Ouvertes (JPO) 2026** de la Cité Scolaire de Mirepoix.
@@ -63,3 +63,10 @@ Actuellement, le script `script.js` simule l'envoi des données et les affiche d
 ├── style.css       # Mise en page, couleurs et design responsive
 ├── script.js       # Logique de navigation et gestion des données
 └── README.md       # Documentation
+
+## Commande à utiliser
+
+Base de données:
+```sql
+ALTER TABLE inscriptions_lycee ADD classe_actuelle VARCHAR(50) AFTER etablissement_origine;
+```
