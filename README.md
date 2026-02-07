@@ -1,6 +1,6 @@
 # Portes Ouvertes - Cité Scolaire de Mirepoix
 
-![Version](https://img.shields.io/badge/version-1.0.5git-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.5-blue.svg)
 ![Status](https://img.shields.io/badge/status-live-green.svg)
 
 Bienvenue sur le dépôt de l'application web dédiée à la **Journée Portes Ouvertes (JPO) 2026** de la Cité Scolaire de Mirepoix.
